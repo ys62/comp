@@ -1,0 +1,269 @@
+<!doctype html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0091ea">
+<meta property="og:image" content="https://yudhveer-singh.github.io/math/maths.png" />
+<meta property="og:site_name" content="Comp" />
+<meta  property="og:type" content="object" />
+<meta property="og:title" content="Computer notes" />
+<meta property="og:url" content="https://yudhveer-singh.github.io/comp" />
+<meta property="og:description" content="Contribute to Yudhveer-Singh" />
+<title>Notes</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+
+</style>
+<link rel="stylesheet" href="materialize_min.css">
+<style>
+.progress{
+  position: fixed;
+  margin:0;
+  display:block;
+}
+a{
+  color:inherit;
+}
+.o{
+  font-size: 20px;
+  float:right;
+}
+@media screen and (min-width: 800px){
+  header {
+    font-size: 28px;
+  }
+  .popup{
+    max-width:420px;
+  }
+}
+</style>
+<script src="jquery.min.js"></script>
+</head>
+<body>
+<div class="progress">
+  <div class="indeterminate"></div>
+</div>
+<div class="description">
+  <div>What's new:</div>
+  <span>+ miner changes</span><br>
+  <span>+ material icons added</span><br>
+  <span>+ assistive touch added</span><br>
+  <span>+ reset option updated</span><br>
+  <span>+ popup bug fixed</span><br>
+  <span>+ 🎉700+ lines of code</span>
+</div>
+<div class="login">
+  <div class="login_head">Sign In</div>
+  <div class="input-field">
+  <input type="text" id="login_name">
+  <label for="login_name">Enter Your Short Name</label>
+  </div>
+  <button class="btn_login_cancel">exit</button>
+  <button class="btn_login">submit</button>
+</div>
+<div class="menu">
+  <a href="">
+    <div class="m refresh waves-effect waves-green">REFRESH</div>
+  </a>
+  <div class="m sign_in waves-effect waves-green">SIGN IN</div>
+  <!--<a href="https://wa.me/+919872629870">-->
+  <a href="mailto:ys.batth62@gmail.com?cc=ekamcosine@gmail.com&subject=FEEDBACK&body=/*Enter Your Feed Here*/">
+    <div class="m feedback waves-effect waves-green">FEEDBACK</div>
+  </a>
+  <div class="m device_info_pop waves-effect waves-green" onclick="device_info_pop()">DEVICE INFO</div>
+  <div class="m reset waves-effect waves-green">RESET</div>
+  <div class="foot">based on Material UI</div>
+</div>
+<div class="asistive_touch">
+  <div class="asis_launcher material-icons">menu</div>
+  <a href=""><div class="asis_1 material-icons">refresh
+  </div></a>
+  <div class="sign_in asis_2 material-icons">face
+  </div>
+  <a href="mailto:ys.batth62@gmail.com?cc=ekamcosine@gmail.com&subject=FEEDBACK&body=/*Enter Your Feed Here*/"><div class="asis_3 material-icons">send
+  </div></a>
+  <div class="asis_4 material-icons" onclick="device_info_pop()">info</div>
+  <div class="asis_5 reset material-icons">delete</div>
+</div>
+<!--<div class="popup">
+  <div class="popup_close"></div>
+  hi
+</div>-->
+<header id="header">
+<div id="title">Computer</div>
+<div class="menu_icon">
+  <img src="menu.svg"></img>
+   <!--<i class="tiny material-icons">view_headline</i>-->
+  </div>
+<!--<div id="greet" class="waves-effect waves-light"></div>-->
+</header>
+
+<section id="content">
+  <section id="subcontent">
+    <div id="greet"></div>
+    <section id="content_card">
+<div id="div">Available Notes:</div>
+<!--<hr id="hr" color="#b64fc8" width="104px" align="left">-->
+<ul>
+<li style="--i:1;">
+  <a href="https://drive.google.com/file/d/1iv_yGt_p3RhaB7I7jal3ozSFY-1HhyH6/view?usp=drivesdk">
+    <button id="box" class="waves-effect waves-green btn">introduction</button> </a> 
+</li>
+<li style="--i:1.3;">
+  <a href="https://drive.google.com/file/d/1ivLwPCA9SOj_x9IafoojuZQ9fRSVXJmS/view?usp=drivesdk">
+    <button id="box" class="waves-effect waves-green btn">I/O devices</button> </a> 
+</li>
+<li style="--i:1.6;">
+  <a href="https://drive.google.com/file/d/1it6oQz6CSvZiusna7J_TkT5pWK4hN52S/view?usp=drivesdk">
+    <button id="box" class="waves-effect waves-green btn">memory</button> </a> 
+</li>
+<li style="--i:1.9;">
+  <a href="https://drive.google.com/file/d/1it6B3t1SxRi3qaaUV7sW7U5xLotpYMWX/view?usp=drivesdk">
+    <button id="box" class="waves-effect waves-green btn">Software</button></a>
+</li>
+<li style="--i:2.2;">
+  <a href="https://drive.google.com/file/d/1iqxY_41ImavUkMpX9ZORwL4Gz89GV6Mn/view?usp=drivesdk">
+    <button id="box" class="waves-effect waves-green btn">Languages
+    </button> </a> 
+</li>
+</ul>
+    </section>
+  </section>
+</section>
+<footer>
+  <div class="footer-copyright grey-text text-lighten-4">
+    2021 Copyright
+    <div class="right version">version: v5.4.0</div>
+  </div>
+</footer>
+<script src="materialize.min.js"></script>
+<script>
+if(localStorage.getItem("name")=="" || localStorage.getItem("name")==null){
+  var name="";
+}else{
+  var name=", "+localStorage.getItem("name");
+}
+var date=new Date();
+var hrs=date.getHours();
+if(hrs<12){
+  document.getElementById('greet').innerHTML="Good Morning"+name+"!!";
+}
+if(hrs>=12&&hrs<=16){
+  document.getElementById('greet').innerHTML="Good Afternoon"+name+"!!";
+}
+if(hrs>16){
+  document.getElementById('greet').innerHTML="Good Evening"+name+"!!";
+}
+var day=date.getDay();
+var dayName;
+switch(day){
+  case 0:
+    var dayName="Sunday";
+    break;
+  case 1:
+    var dayName="Monday";
+    break;
+  case 2:
+    var dayName="Tuesday";
+    break;
+  case 3:
+    var dayName="Wednesday";
+    break;
+  case 4:
+    var dayName="Thusday";
+    break;
+  case 5:
+    var dayName="Friday";
+    break;
+  case 6:
+    var dayName="Seturday";
+    break;
+}
+$(".version").mouseenter(function(){
+  $(".description").css({
+    "transform":"translateX(0px)"
+  });
+});
+$(".version").mouseleave(function(){
+  $(".description").css({
+    "transform":"translateX(260px)"
+  });
+});
+$("#greet").click(function (){
+  $(".login").css({
+    "transform":"translateX(0px)"
+  });
+});
+$(".btn_login").click(function(){
+  let name=$("#login_name").val();
+  localStorage.setItem("name",name);
+  $(".login").css({
+    "transform":"translateX(-320px)"
+  });
+});
+$(".btn_login_cancel").click(function(){
+  $(".login").css({
+    "transform":"translateX(-320px)"
+  });
+});
+$(".menu .reset").click(function(){
+  localStorage.clear();
+  $(".menu_icon").trigger("click");
+  window.location.replace("");
+});
+$(".menu_icon").click(function(){
+  $(".menu").toggleClass("menu_on");
+});
+$(".sign_in").click(function(){
+  $(".login").css({
+    "transform":"translateX(0px)"
+  });
+});
+function pop(message){
+  $("body").append($('<div></div>').attr("class","popup").html(message));
+  $(".popup").append($('<div></div>').attr("class","popup_close"));
+  $(".popup_close").click(function(){
+    $(".popup").css({
+      "display":"none"
+    });
+  });
+}
+//pop("Hi"+name+"<br>Have a nice "+dayName+".");
+function device_info_pop(){
+pop(
+  "<u><b>Device Info</b></u>:-<br>"+
+  "<b>Width: </b>"+$('body').css("width")+"<br>"
++"<b>Height: </b>"+$('body').css("height")+"<br>"
++"<b>Browser</b>: "+navigator.appVersion+"<br>");
+}
+if(localStorage.getItem("pop_700")==null){
+  pop('Celebrating 700+ lines of code<span style="font-size:30px;">🎉🎊</span><br><b>Must FEEDBACK</b>');
+  localStorage.setItem("pop_700","ok");
+}
+var asis_var=0;
+function asist_off(){
+  $(".asis_1,.asis_2,.asis_3,.asis_4,.asis_5").css({
+    "transform":"translateY(0)"
+  });
+}
+function asist_on(){
+  $(".asis_1").css({"transform":"translateY(-60px)"});
+  $(".asis_2").css({"transform":"translateY(-120px)"});
+  $(".asis_3").css({"transform":"translateY(-180px)"});
+  $(".asis_4").css({"transform":"translateY(-240px)"});
+  $(".asis_5").css({"transform":"translateY(-300px)"});
+}
+$(".asis_launcher").click(function (){
+  if(asis_var==0){
+    asist_on();
+    asis_var++;
+  }
+  else{
+    asist_off();
+    asis_var--;
+  }
+});
+</script>
+<script src="preloader.js"></script>
+</body>
+</html>
