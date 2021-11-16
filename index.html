@@ -2,12 +2,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#0091ea">
+<meta name="theme-color" content="#d0181e">
 <meta property="og:image" content="https://yudhveer-singh.github.io/math/maths.png" />
-<meta property="og:site_name" content="Comp" />
+<meta property="og:site_name" content="Maths" />
 <meta  property="og:type" content="object" />
-<meta property="og:title" content="Computer notes" />
-<meta property="og:url" content="https://yudhveer-singh.github.io/comp" />
+<meta property="og:title" content="Math notes" />
+<meta property="og:url" content="https://yudhveer-singh.github.io/math" />
 <meta property="og:description" content="Contribute to Yudhveer-Singh" />
 <title>Notes</title>
 <link rel="stylesheet" href="styles.css">
@@ -50,6 +50,8 @@ a{
   <span>+ assistive touch added</span><br>
   <span>+ reset option updated</span><br>
   <span>+ popup bug fixed</span><br>
+  <span>+ toast added</span><br>
+  <span>+ miner bugs fixed</span><br>
   <span>+ 🎉700+ lines of code</span>
 </div>
 <div class="login">
@@ -76,11 +78,11 @@ a{
 </div>
 <div class="asistive_touch">
   <div class="asis_launcher material-icons">menu</div>
-  <a href=""><div class="asis_1 material-icons">refresh
+  <a href=""><div class="refresh asis_1 material-icons">refresh
   </div></a>
   <div class="sign_in asis_2 material-icons">face
   </div>
-  <a href="mailto:ys.batth62@gmail.com?cc=ekamcosine@gmail.com&subject=FEEDBACK&body=/*Enter Your Feed Here*/"><div class="asis_3 material-icons">send
+  <a href="mailto:ys.batth62@gmail.com?cc=ekamcosine@gmail.com&subject=FEEDBACK&body=/*Enter Your Feed Here*/"><div class="feedback asis_3 material-icons">send
   </div></a>
   <div class="asis_4 material-icons" onclick="device_info_pop()">info</div>
   <div class="asis_5 reset material-icons">delete</div>
@@ -90,7 +92,7 @@ a{
   hi
 </div>-->
 <header id="header">
-<div id="title">Computer</div>
+<div id="title">Maths</div>
 <div class="menu_icon">
   <img src="menu.svg"></img>
    <!--<i class="tiny material-icons">view_headline</i>-->
@@ -102,28 +104,28 @@ a{
   <section id="subcontent">
     <div id="greet"></div>
     <section id="content_card">
-<div id="div">Available Notes:</div>
+<div id="div">Available Sol<sup>n</sup>s:</div>
 <!--<hr id="hr" color="#b64fc8" width="104px" align="left">-->
 <ul>
 <li style="--i:1;">
-  <a href="https://drive.google.com/file/d/1iv_yGt_p3RhaB7I7jal3ozSFY-1HhyH6/view?usp=drivesdk">
-    <button id="box" class="waves-effect waves-green btn">introduction</button> </a> 
+  <a href="https://drive.google.com/file/d/1aRZFEp8OfQJ6IfDN5Owi45WwRnzDZU_6/view?usp=drivesdk">
+    <button id="box" class="waves-effect waves-green btn">Higher Order Derivatives</button> </a> 
 </li>
 <li style="--i:1.3;">
-  <a href="https://drive.google.com/file/d/1ivLwPCA9SOj_x9IafoojuZQ9fRSVXJmS/view?usp=drivesdk">
-    <button id="box" class="waves-effect waves-green btn">I/O devices</button> </a> 
+  <a href="https://drive.google.com/file/d/1aQ7ZU5nqm3cQgBil_Pooai1udHZ8F51g/view?usp=drivesdk">
+    <button id="box" class="waves-effect waves-green btn">Asymptotes</button> </a> 
 </li>
 <li style="--i:1.6;">
-  <a href="https://drive.google.com/file/d/1it6oQz6CSvZiusna7J_TkT5pWK4hN52S/view?usp=drivesdk">
-    <button id="box" class="waves-effect waves-green btn">memory</button> </a> 
+  <a href="https://drive.google.com/file/d/1athKDEBDzthSeKKF9ErBnroaXTMB_eSc/view?usp=drivesdk">
+    <button id="box" class="waves-effect waves-green btn">Curvature</button> </a> 
 </li>
 <li style="--i:1.9;">
-  <a href="https://drive.google.com/file/d/1it6B3t1SxRi3qaaUV7sW7U5xLotpYMWX/view?usp=drivesdk">
-    <button id="box" class="waves-effect waves-green btn">Software</button></a>
+  <a href="https://drive.google.com/file/d/1fjEU2mnXf6mgFOkKFPkv92UWU_UlAS-X/view?usp=drivesdk">
+    <button id="box" class="waves-effect waves-green btn">Concavity</button></a>
 </li>
 <li style="--i:2.2;">
-  <a href="https://drive.google.com/file/d/1iqxY_41ImavUkMpX9ZORwL4Gz89GV6Mn/view?usp=drivesdk">
-    <button id="box" class="waves-effect waves-green btn">Languages
+  <a href="https://drive.google.com/file/d/1ffGU28-lLlYeOsTdJ8Q2NgIyhGbWXKp5/view?usp=drivesdk">
+    <button id="box" class="waves-effect waves-green btn">Multiple Points
     </button> </a> 
 </li>
 </ul>
@@ -133,7 +135,7 @@ a{
 <footer>
   <div class="footer-copyright grey-text text-lighten-4">
     2021 Copyright
-    <div class="right version">version: v5.4.0</div>
+    <div class="right version">version: v5.5.3</div>
   </div>
 </footer>
 <script src="materialize.min.js"></script>
@@ -200,6 +202,7 @@ $(".btn_login").click(function(){
   $(".login").css({
     "transform":"translateX(-320px)"
   });
+  toast("saved successfully!!",3000);
 });
 $(".btn_login_cancel").click(function(){
   $(".login").css({
@@ -219,6 +222,15 @@ $(".sign_in").click(function(){
     "transform":"translateX(0px)"
   });
 });
+$(".feedback").click(function(){
+    toast("opening...",3000);
+});
+$(".refresh").click(function(){
+    toast("refreshing...",3000);
+});
+$(".reset").click(function(){
+    toast("cleaning your data...",3000);
+});
 function pop(message){
   $("body").append($('<div></div>').attr("class","popup").html(message));
   $(".popup").append($('<div></div>').attr("class","popup_close"));
@@ -237,7 +249,7 @@ pop(
 +"<b>Browser</b>: "+navigator.appVersion+"<br>");
 }
 if(localStorage.getItem("pop_700")==null){
-  pop('Celebrating 700+ lines of code<span style="font-size:30px;">🎉🎊</span><br><b>Must FEEDBACK</b>');
+  pop('Celebrating 700+ lines of code<span style="font-size:30px;">🎉🎊</span>');
   localStorage.setItem("pop_700","ok");
 }
 var asis_var=0;
@@ -263,6 +275,16 @@ $(".asis_launcher").click(function (){
     asis_var--;
   }
 });
+function toast(msg,toast_duration){
+    $(".atoast").empty();
+    $("body").prepend($('<div></div>').attr("class","atoast"));
+    $(".atoast").append($('<div></div>').attr("class","tos").html(msg));
+    setTimeout(function(){
+        $(".atoast").empty();
+    },toast_duration);
+}
+toast("welcome!!",3000);
+//M.toast({html:'hi'});
 </script>
 <script src="preloader.js"></script>
 </body>
