@@ -2,7 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
-@font-face {font-family: 'Material Icons';font-style: normal;font-weight: 400;src: url(material_icons.woff2) format('woff2');}
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(material_icons.woff2) format('woff2');
+}
 
   .material-icons {
    font-family: 'Material Icons';
@@ -21,19 +26,19 @@
   }
 :root{
   /*blue*/
-  /*--body_back: #eef2ff;
+  --body_back: #eef2ff;
   --main_color: #64c1ff;
   --main_light: #aae8ff;
   --header: #0091ea;
   --main_dark: #0064b7;
-  --badge: var(--header);*/
+  --badge: var(--header);
   /*red*/
-  --body_back: #ffedef;
+  /*--body_back: #ffedef;
   --main_color: #f3989b;
   --main_light: #f8c1c3;
   --header: #d0181e;
   --main_dark: #8b1014;
-  --badge: var(--header);
+  --badge: var(--header);*/
   /*orange*/
   /*--body_back: #FFF4E9;
   --main_color: #FFB069;
