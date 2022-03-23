@@ -1,3 +1,4 @@
+
 <!doctype html>
 <head>
 <meta charset="utf-8">
@@ -28,16 +29,31 @@ a{
   font-size: 20px;
   float:right;
 }
-@media screen and (min-width: 800px){
+@media screen and (min-width: 650px){
   header {
     font-size: 28px;
+    height: 120px;
   }
   .popup{
     max-width:420px;
   }
+  #grid{
+     display: grid;
+     grid-template-columns: auto  auto;
+  }
+  #content_card{
+     margin-left: 8px;
+     margin-right: 8px;
+  }
+}
+@media screen and (min-width: 800px){
+   #box{
+      width: 260px;
+   }
 }
 </style>
 <script src="jquery.min.js"></script>
+<script src="crypto.js"></script>
 </head>
 <body>
 <div class="progress">
@@ -46,13 +62,11 @@ a{
 <div class="description">
   <div>What's new:</div>
   <span>+ miner changes</span><br>
-  <span>+ material icons added</span><br>
-  <span>+ assistive touch added</span><br>
-  <span>+ reset option updated</span><br>
-  <span>+ popup bug fixed</span><br>
-  <span>+ toast added</span><br>
   <span>+ miner bugs fixed</span><br>
-  <span>+ 🎉700+ lines of code</span>
+  <span>+ desktop update</span><br>
+  <span>+ grid support</span><br>
+  <span>+ 🎉800+ lines of code</span><br>
+  <span>+ more secure</span>
 </div>
 <div class="login">
   <div class="login_head">Sign In</div>
@@ -103,6 +117,8 @@ a{
 <section id="content">
   <section id="subcontent">
     <div id="greet"></div>
+    <div id="grid">
+    <section id="content_card_box">
     <section id="content_card">
 <div id="div">Available Notes:</div>
 <!--<hr id="hr" color="#b64fc8" width="104px" align="left">-->
@@ -117,20 +133,46 @@ a{
 </li>
 </ul>
     </section>
+    </section>
+     <section id="content_card_box">
+    <section id="content_card">
+<div id="div">Books:</div>
+<!--<hr id="hr" color="#b64fc8" width="104px" align="left">-->
+<ul>
+<li style="--i:1;">
+  <a href="">
+    <button id="box" class="waves-effect waves-green btn">To be added soon...</button> </a> 
+</li>
+</li>
+</ul>
+    </section>
+    </section>
+    </div>
   </section>
 </section>
 <footer>
   <div class="footer-copyright grey-text text-lighten-4">
-    2021 Copyright
-    <div class="right version">version: v5.5.3</div>
+    2022 Copyright
+    <div class="right version">version: v5.6.1</div>
   </div>
 </footer>
 <script src="materialize.min.js"></script>
 <script>
-if(localStorage.getItem("name")=="" || localStorage.getItem("name")==null){
+/*if(localStorage.getItem("name")=="" || localStorage.getItem("name")==null){
   var name="";
 }else{
   var name=", "+localStorage.getItem("name");
+}*/
+var params = new window.URLSearchParams(window.location.search);
+if(localStorage.getItem("name")=="" || localStorage.getItem("name")==null){
+  var name="";
+}else{
+  var name=", "+dec(localStorage.getItem("name"),all);
+}
+if(params.get('n')!==null){
+   var na=dec(params.get('n'),all);
+   var name=", "+na;
+   localStorage.setItem("name",enc(na,all));
 }
 var date=new Date();
 var hrs=date.getHours();
@@ -185,7 +227,7 @@ $("#greet").click(function (){
 });
 $(".btn_login").click(function(){
   let name=$("#login_name").val();
-  localStorage.setItem("name",name);
+  localStorage.setItem("name",enc(name,all));
   $(".login").css({
     "transform":"translateX(-320px)"
   });
@@ -235,9 +277,9 @@ pop(
 +"<b>Height: </b>"+$('body').css("height")+"<br>"
 +"<b>Browser</b>: "+navigator.appVersion+"<br>");
 }
-if(localStorage.getItem("pop_700")==null){
-  pop('Celebrating 700+ lines of code<span style="font-size:30px;">🎉🎊</span><br><b>Must FEEDBACK</b>');
-  localStorage.setItem("pop_700","ok");
+if(localStorage.getItem("pop_800")==null){
+  pop('Celebrating 800+ lines of code<span style="font-size:30px;">🎉🎊</span><br><b>Must FEEDBACK</b>');
+  localStorage.setItem("pop_800","ok");
 }
 var asis_var=0;
 function asist_off(){

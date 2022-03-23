@@ -100,6 +100,9 @@ body{
   max-width: fit-content;
   margin: 16px auto 0 auto;
 }
+#content_card_box{
+   margin-bottom: 40px;
+}
 #subcontent{
   padding: 20px;
   transform: translateY(-80px);
@@ -287,7 +290,17 @@ footer::after{
   border:none;
   border-radius: 22px;
   transition-duration: 1s;
+  overflow: hidden;
 }
+/*.btn_login:before{
+   z-index:-1;
+   content: "";
+   width: 85px;
+   height: 100px;
+   background: var(--header);
+   transform: translate(-18px,-14px) rotateZ(-45deg);
+   position:absolute;
+}*/
 .btn_login:hover{
   background: var(--header);
   border-radius: 4px;
